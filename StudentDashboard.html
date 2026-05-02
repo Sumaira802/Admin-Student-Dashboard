@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .notifications,
+        .signOut,
+        .dashboard,
+        .profile,
+        .result,
+        .Fees,
+        .slip,
+        .setting {
+            display: none;
+        }
+
+        .welcome img {
+            width: 200px;
+            height: 100px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="welcome">
+                    <img src="Logo.png" alt="Logo">
+                Welcome
+            </h1>
+            <a href="#" id="Notifications">
+                <span class="material-symbols-outlined">notifications</span>
+                <h4>Notifications</h4>
+            </a>    
+            <a href="#" id="Dashboard">
+                <span class="material-symbols-outlined">dashboard</span>
+                <h4>Dashboard</h4>
+            </a>
+            <a href="#" id="Profile">
+                <span class="material-symbols-outlined">person</span>
+                <h4>Profile</h4>
+            </a>
+            <a href="#" id="Result">
+                <span class="material-symbols-outlined">school</span>
+                <h4>Result</h4>
+            </a>
+            <a href="#" id="Fee">
+                <span class="material-symbols-outlined">receipt_long</span>
+                <h4>Fee</h4>
+            </a>
+            <a href="#" id="Slip">
+                <span class="material-symbols-outlined">assignment</span>
+                <h4>Exam Entry Slip</h4>
+            </a>
+            <a href="#" id="Setting">
+                <span class="material-symbols-outlined">settings</span>
+                <h4>Settings</h4>
+            </a>
+            <a href="#" id="SignOut">
+                <span class="material-symbols-outlined">logout</span>
+                <h4>Sign Out</h4>
+            </a>
+        </div>
+
+        <div class="Content">
+            <div class="notifications">
+                <br>
+                <hr>
+                <h1>Notifications</h1>
+                <p>No new notifications.</p>
+            </div>
+
+            <div class="signOut">
+                <hr>
+                <h1>Sign Out Successfully</h1>
+            </div>
+
+        
+            <div class="dashboard">
+                <hr>
+                <div class="flex">
+                    <div id="Photo">
+                        <h1>Photo</h1>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th>Name:</th>
+                                <td>Sumaira Zafar</td>
+                                <th>Roll No</th>
+                                <td>FUI/FURC/F-24-BSET-089</td>
+                            </tr>
+                            <tr>
+                                <th>Program:</th>
+                                <td>BSET</td>
+                                <th>Registered Courses</th>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <th>Total Registration Courses:</th>
+                                <td>33</td>
+                                <th>Selected Course:</th>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+                <br> <hr>
+                <h1>Student's Courses Summary</h1>
+
+                <!-- Table ke bahar ye wrapper lazmi lagayein -->
+                <div class="table-responsive">
+                    <table>
+                        <tr>
+                            <th>S#</th>
+                            <th>Course Title</th>
+                            <th>Class</th>
+                            <th>Faculty</th>
+                            <th>Lectures</th>
+                            <th>P</th>
+                            <th>A</th>
+                            <th>%</th>
+                            <th>Mark Attendance</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Environmental Science</td>
+                            <td>BSET-4B</td>
+                            <td>Ms.Saima Khaliq</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><a href="#">N/A</a></td>
+                            <td><button id="attendanceBtn" onclick="alert('Attendance Marked!')">Mark Attendance</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Intro to Web Technologies</td>
+                            <td>BSET-4B</td>
+                            <td>Mr.Shamshair Ali</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td><a href="#">100%</a></td>
+                            <td><button id="attendanceBtn" onclick="alert('Attendance Marked!')">Mark Attendance</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Intro to Web Technologies Lab</td>
+                            <td>BSET-4B</td>
+                            <td>Ms. Tayyaba Siddiquie</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><a href="#">N/A</a></td>
+                            <td><button id="attendanceBtn" onclick="alert('Attendance Marked!')">Mark Attendance</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mobile App Development</td>
+                            <td>BSET-4B</td>
+                            <td>Mr. Ibrar Hussain</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><a href="#">N/A</a></td>
+                            <td><button id="attendanceBtn" onclick="alert('Attendance Marked!')">Mark Attendance</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Mobile App Development Lab</td>
+                            <td>BSET-4B</td>
+                            <td>Ms. Tayyaba Siddiquie</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><a href="#">N/A</a></td>
+                            <td><button id="attendanceBtn" onclick="alert('Attendance Marked!')">Mark Attendance</button></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Operating System Principles</td>
+                            <td>BSET-4B</td>
+                            <td>Ms. Sidra Nawaz</td>
+                            <td>16</td>
+                            <td>16</td>
+                            <td>0</td>
+                            <td><a href="#">100%</a></td>
+                            <td><button id="attendanceBtn" onclick="alert('Attendance Marked!')">Mark Attendance</button></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Operating System Principles Lab</td>
+                            <td>BSET-4B</td>
+                            <td>Ms. Areej Khurram</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><a href="#">N/A</a></td>
+                            <td><button id="attendanceBtn" onclick="alert('Attendance Marked!')">Mark Attendance</button></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Technical Report Writing</td>
+                            <td>BSET-4B</td>
+                            <td>Ms. Saroosh Jamil</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td><a href="#">100%</a></td>
+                            <td><button id="attendanceBtn" onclick="alert('Attendance Marked!')">Mark Attendance</button></td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+        
+
+            <div class="profile">
+                <hr>
+                <h1>Profile</h1>
+
+                <!-- Table ke bahar ye wrapper lazmi lagayein -->
+                <div class="table-responsive">
+                    <table style="padding: 10px 50px 20px 1px;">
+                        <tr>
+                            <th>Name:</th>
+                            <td>Sumaira Zafar</td>
+                        </tr>
+                        <tr>
+                            <th>Roll No:</th>
+                            <td>12345</td>
+                        </tr>
+                        <tr>
+                            <th>Program:</th>
+                            <td>BSET</td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td>sumaira.zafar@example.com</td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+
+            <div class="result"><hr>
+                <h1>Result Card</h1>
+                <div class="table-responsive">
+                    <table>
+                        <caption>Semester 1</caption>
+                        <tr>
+                            <th>Course No:</th>
+                            <th>Course Title</th>
+                            <th>Credit</th>
+                            <th>LG</th>
+                            <th>GPC</th>
+                            <th>GP</th>
+                        </tr>
+                        <tr>
+                            <th>GER1100</th>
+                            <td>Application of Information & Communication Technologies</td>
+                            <td>2</td>
+                            <td>B</td>
+                            <td>2.96</td>
+                            <td>5.92</td>
+                        </tr>
+                        <tr>
+                            <th>GER1100L</th>
+                            <td>Application of Information & Communication Technologies Lab</td>
+                            <td>1</td>
+                            <td>A+</td>
+                            <td>4.00</td>
+                            <td>4.00</td>
+                        </tr>
+                        <tr>
+                            <th>GER1102</th>
+                            <td>Functional English</td>
+                            <td>3</td>
+                            <td>C</td>
+                            <td>2.08</td>
+                            <td>6.24</td>
+                        </tr>
+                        <tr>
+                            <th>GER1304</th>
+                            <td>Calculus and Analytic Geometry</td>
+                            <td>3</td>
+                            <td>A+</td>
+                            <td>4.0</td>
+                            <td>12.00</td>
+                        </tr>
+                        <tr>
+                            <th>GER2400</th>
+                            <td>Islamic Studies</td>
+                            <td>2</td>
+                            <td>C+</td>
+                            <td>2.40</td>
+                            <td>4.80</td>
+                        </tr>
+                        <tr>
+                            <th>IET1001</th>
+                            <td>Programming Fundamentals</td>
+                            <td>2</td>
+                            <td>A+</td>
+                            <td>4.0</td>
+                            <td>12.00</td>
+                        </tr>
+                        <tr>
+                            <th>IET1001L</th>
+                            <td>Programming Fundamentals Labs</td>
+                            <td>3</td>
+                            <td>A+</td>
+                            <td>4.0</td>
+                            <td>12.00</td>
+                        </tr>
+                        <tr>
+                            <th>IET1022</th>
+                            <td>Digital Logic Design</td>
+                            <td>3</td>
+                            <td>A+</td>
+                            <td>4.0</td>
+                            <td>12.00</td>
+                        </tr>
+                        <tr>
+                            <th>GPA</th>
+                            <td colspan="1">3.7</td>
+                            <th>CGPA</th>
+                            <td colspan="3">3.7</td><br>
+                        </tr>
+                        <tr>
+                            <th>Academic Status</th>
+                            <td colspan="5">Promoted</td>
+                        </tr>
+
+                    </table>
+                    <hr>
+                    <table>
+                        <caption>Semester 2</caption>
+                        <tr>
+                            <th>Course No:</th>
+                            <th>Course Title</th>
+                            <th>Credit</th>
+                            <th>LG</th>
+                            <th>GPC</th>
+                            <th>GP</th>
+                        </tr>
+                        <tr>
+                            <th>GER1100</th>
+                            <td>Ideology and Constitution of Pakistan</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GER1101</th>
+                            <td>Applied Physics</td>
+                            <td>3</td>
+                            <td>A-</td>
+                            <td>3.7</td>
+                            <td>11.1</td>
+                        </tr>
+                        <tr>
+                            <th>GER1102</th>
+                            <td>Applied Physics Lab</td>
+                            <td>3</td>
+                            <td>B+</td>
+                            <td>3.3</td>
+                            <td>9.9</td>
+                        </tr>
+
+                        <tr>
+                            <th>GER1103</th>
+                            <td>Professional Practises</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GER1103</th>
+                            <td>Object Oriented Programming</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GER1103</th>
+                            <td>Object Oriented Programming Lab</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GER1103</th>
+                            <td>Computer Networking Technologies</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GER1103</th>
+                            <td>Computer Networking Technologies Lab</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+
+                        <tr>
+                            <th>GPA</th>
+                            <td colspan="1">3.7</td>
+                            <th>CGPA</th>
+                            <td colspan="3">3.7</td>
+                        </tr>
+                        <tr>
+                            <th>Academic Status</th>
+                            <td colspan="5">Promoted</td>
+                        </tr>
+
+                    </table>
+                    <hr>
+                    <table>
+                        <caption>Semester 3</caption>
+                        <tr>
+                            <th>Course No:</th>
+                            <th>Course Title</th>
+                            <th>Credit</th>
+                            <th>LG</th>
+                            <th>GPC</th>
+                            <th>GP</th>
+                        </tr>
+                        <tr>
+                            <th>GER1100</th>
+                            <td>Probability and Statistics</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GER1101</th>
+                            <td>Civics and Community Engagement</td>
+                            <td>3</td>
+                            <td>A-</td>
+                            <td>3.7</td>
+                            <td>11.1</td>
+                        </tr>
+                        <tr>
+                            <th>GER1102</th>
+                            <td>Entrepreneurship</td>
+                            <td>3</td>
+                            <td>B+</td>
+                            <td>3.3</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <th>GER1103</th>
+                            <td>Computer Architecture and Assembly Language</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GER1103</th>
+                            <td>Computer Architecture and Assembly Language Lab</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GER1103</th>
+                            <td>Data Structures and Algorithms</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GER1103</th>
+                            <td>Data Structures and Algorithms Lab</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GER1103</th>
+                            <td>Database Systems</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GER1103</th>
+                            <td>Database Systems Lab</td>
+                            <td>3</td>
+                            <td>A</td>
+                            <td>4.0</td>
+                            <td>12.0</td>
+                        </tr>
+                        <tr>
+                            <th>GPA</th>
+                            <td colspan="1">3.7</td>
+                            <th>CGPA</th>
+                            <td colspan="3">3.7</td>
+                        </tr>
+                        <tr>
+                            <th>Academic Status</th>
+                            <td colspan="5">Promoted</td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+
+            <div class="Fees"><hr>
+                <h1> History</h1>
+
+                <div class="table-responsive">
+                    <table style="display: flex; align-items: center; justify-content: center;  padding: 10px 50px 20px 1px;">
+                        <tr>
+                            <th>Sr#</th>
+                            <th>Session</th>
+                            <th>Fee Type</th>
+                            <th>Installment</th>
+                            <th>Previous Dues</th>
+                            <th>Semester Dues</th>
+                            <th>Assistance</th>
+                            <th>Assistance Paid</th>
+                            <th>Net Dues</th>
+                            <th>Dues Paid</th>
+                            <th>Paid Date</th>
+                            <th>Outstanding Balance</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Fall 2024</td>
+                            <td>FA24 - 1st Semester</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>122,575.000</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>122575</td>
+                            <td>61288</td>
+                            <td>Friday, Oct 04,2024</td>
+                            <td>61287</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Fall 2024</td>
+                            <td>FA24 - 1st Semester</td>
+                            <td>2</td>
+                            <td>61287</td>
+                            <td>0.000</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>61287</td>
+                            <td>61287</td>
+                            <td>Monday, Dec 30,2024</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>Spring 2025</td>
+                            <td>SP25 - 2nd Semester</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>92,575.000</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>92575</td>
+                            <td>92575</td>
+                            <td>Thursday, Mar 06,2025</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>Fall 2025</td>
+                            <td>FA25 - 3rd Semester</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>101,800.000</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>101800</td>
+                            <td>101800</td>
+                            <td>Friday, Oct 10,2025</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <td>Spring 2026</td>
+                            <td>SP26 - 4th Semester</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>101,800.000</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>101800</td>
+                            <td>101800</td>
+                            <td>Friday, Feb 27,2026</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+
+            <div class="slip"><hr>
+                <h1>Exam Entry Slip</h1>
+                <button>Download Slip</button>
+            </div>
+
+            <div class="setting"><hr>
+                <h1>Settings</h1>
+                <div class="password">
+                    <label for="current_password">Current Password:</label>
+                    <input placeholder="Enter current passowrd" type="password" id="current_password"> <br>
+                    <label for="password">New Password:</label>
+                    <input placeholder="Enter new passowrd" type="password" id="password"><br>
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input placeholder="Confirm new password" type="password" id="confirm_password"><br>
+                    <button>Change Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Script.js"></script>
+</html>
