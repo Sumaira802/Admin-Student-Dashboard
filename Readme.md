@@ -28,6 +28,6 @@ Open AdminDashboard.html in any modern web browser to manage data.
 Open StudentDashboard.html to view the student interface.
 
 Developer
-Name: Sumaira Zafar  
-Roll No: FUI/FURC/F-24-BSET-089  
+Name: Sumaira Zafar & Eman Afrooz
+Roll No: FUI/FURC/F-24-BSET-089 & FUI/FURC/F-24-BSET-057
 University: Foundation University Islamabad (FUI)
